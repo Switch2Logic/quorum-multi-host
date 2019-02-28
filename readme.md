@@ -8,9 +8,9 @@ This example makes use of the istanbul-tool to generate genisis and docker-compo
 1. Remove all network configurations related to docker
 2. Change the IP Addresses to point to host peer ipaddress
 3. Foreach peer add the --permissioned \ flag under the entrypoint -> "geth \ --permissioned \
-4. Foreach peer copy the static nodes 'echo ["enode://da99607a....' to a line below the copied line`
+4. Foreach peer copy the static nodes 'echo ["enode://da99607a....' to a line below the copied line
 5. Change the file directory and the end of the new line '> /eth/geth/static-nodes.json too  > ./permissioned-nodes.json
-6. Split the files up into 2 or 3 and copy it to each host.
+6. Split the files up into 2 or 3 and copy it to each host
 
 # Start the docker containers
 `$ docker-compose -f docker-compose-quorum-node1.yaml up -d`
@@ -54,7 +54,7 @@ This example makes use of the istanbul-tool to generate genisis and docker-compo
 `private.get()`
 
 # Notes
-We should never expose the rpc of a peer to outside world. In this example the ipc is expose just for easy of testing. Be sure to change the --rpcaddr "0.0.0.0" -> --rpcaddr "127.0.0.1"
+We should never expose the rpc of a peer to outside world. In this example the ipc is expose just for easy of testing. Be sure to change the --rpcaddr "0.0.0.0" -> --rpcaddr "127.0.0.1".
 
 
 
