@@ -1,16 +1,16 @@
-#Quorum IBFT network with permissoned-nodes 
-This example makes use of the istanbul-tool to generate genisis and docker-compose file. The Permissioned feuture need to be enabled.
+# Quorum IBFT network with permissoned-nodes 
+This example makes use of the istanbul-tool to generate genisis and docker-compose file.
 
 # Generate files
 `$ istanbul setup --num 3 --docker-compose --quorum --save`
 
 # Modify docker-compose.yml file
-`1. Remove all network configurations related to docker`
-`2. Change the IP Addresses to point to host peer ipaddress`
-`3. Foreach peer add the --permissioned \ flag under the entrypoint -> "geth \ --permissioned \`
-`4. Foreach peer copy the static nodes 'echo ["enode://da99607a....' to a line below the copied line`
-`5. Change the file directory and the end of the new line '> /eth/geth/static-nodes.json too  > ./permissioned-nodes.json`
-`6. Split the files up into 2 or 3 and copy it to each host.`
+1. Remove all network configurations related to docker
+2. Change the IP Addresses to point to host peer ipaddress
+3. Foreach peer add the --permissioned \ flag under the entrypoint -> "geth \ --permissioned \
+4. Foreach peer copy the static nodes 'echo ["enode://da99607a....' to a line below the copied line`
+5. Change the file directory and the end of the new line '> /eth/geth/static-nodes.json too  > ./permissioned-nodes.json
+6. Split the files up into 2 or 3 and copy it to each host.
 
 # Start the docker containers
 `$ docker-compose -f docker-compose-quorum-node1.yaml up -d`
