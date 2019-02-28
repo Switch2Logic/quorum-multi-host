@@ -54,7 +54,7 @@ This example makes use of the istanbul-tool to generate genisis and docker-compo
 `private.get()`
 
 # Notes
-`We should never expose the rpc of a peer to outside world. In this example the ipc is expose just for easy of testing. Be sure to change the --rpcaddr "0.0.0.0" -> --rpcaddr "127.0.0.1" `
+We should never expose the rpc of a peer to outside world. In this example the ipc is expose just for easy of testing. Be sure to change the --rpcaddr "0.0.0.0" -> --rpcaddr "127.0.0.1"
 
 
 
